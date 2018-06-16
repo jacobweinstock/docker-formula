@@ -91,7 +91,7 @@ docker package:
     {%- if grains['os']|lower in ('amazon', 'fedora', 'suse',) %}
     - name: docker
     {%- else %}
-    - name: docker-engine
+    - name: docker-ce
     {%- endif %}
     - version: {{ docker.version }}
     {%- endif %}
@@ -104,7 +104,7 @@ docker package:
     {%- if grains['os']|lower in ('amazon', 'fedora', 'suse',) %}
     - name: docker
     {%- else %}
-    - name: docker-engine
+    - name: docker-ce
     {%- endif %}
     {%- endif %}
   {%- endif %}
